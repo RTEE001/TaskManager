@@ -27,6 +27,30 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL0luZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Job/ShowSearchForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSm9iL1Nob3dTZWFyY2hGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/home/thifhidzi/RiderProjects/TaskManager/TaskManager/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
