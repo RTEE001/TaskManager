@@ -38,6 +38,22 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Facebook": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.MicrosoftAccount": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Twitter": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.16, )"
@@ -50,11 +66,19 @@
               "target": "Package",
               "version": "[6.0.16, )"
             },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[6.0.16, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.16, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite.Core": {
               "target": "Package",
               "version": "[6.0.16, )"
             },

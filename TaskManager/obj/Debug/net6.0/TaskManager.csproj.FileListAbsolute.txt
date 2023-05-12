@@ -302,3 +302,7 @@
 /home/thifhidzi/RiderProjects/TaskManager/TaskManager/obj/Debug/net6.0/TaskManager.pdb
 /home/thifhidzi/RiderProjects/TaskManager/TaskManager/obj/Debug/net6.0/TaskManager.genruntimeconfig.cache
 /home/thifhidzi/RiderProjects/TaskManager/TaskManager/obj/Debug/net6.0/ref/TaskManager.dll
+/home/thifhidzi/RiderProjects/TaskManager/TaskManager/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Facebook.dll
+/home/thifhidzi/RiderProjects/TaskManager/TaskManager/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Google.dll
+/home/thifhidzi/RiderProjects/TaskManager/TaskManager/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.MicrosoftAccount.dll
+/home/thifhidzi/RiderProjects/TaskManager/TaskManager/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.Twitter.dll

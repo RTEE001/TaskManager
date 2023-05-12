@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+txKxwrp3TJ5nCy2VTtTWeSLD2kDeQTb4SbkChbU1cs=",
+  "Hash": "A6kKqOcK2hZPCeX1dt5VGETwT9bZqfkK+K907QX8b4M=",
   "Source": "TaskManager",
   "BasePath": "_content/TaskManager",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/css/site.css"
+    },
+    {
+      "Identity": "/home/thifhidzi/RiderProjects/TaskManager/TaskManager/wwwroot/css/style.css",
+      "SourceId": "TaskManager",
+      "SourceType": "Discovered",
+      "ContentRoot": "/home/thifhidzi/RiderProjects/TaskManager/TaskManager/wwwroot/",
+      "BasePath": "_content/TaskManager",
+      "RelativePath": "css/style.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/css/style.css"
     },
     {
       "Identity": "/home/thifhidzi/RiderProjects/TaskManager/TaskManager/wwwroot/favicon.ico",
