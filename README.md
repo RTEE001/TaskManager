@@ -18,5 +18,5 @@ A web application that allows users to schedule their tasks and sends them remin
 - Allow group integration
 - Allow sub-tasks
 - Check completed and outstanding tasks over a selected period of time
-
+- Create a better UI
 
