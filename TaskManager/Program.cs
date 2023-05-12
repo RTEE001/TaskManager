@@ -14,6 +14,33 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddAuthentication()
+    .AddGoogle(options =>
+    {
+        var googleAuthNSection =
+            builder.Configuration.GetSection("Authentication:Google");
+        options.ClientId = googleAuthNSection["ClientId"];
+        options.ClientSecret = googleAuthNSection["ClientSecret"];
+    })
+    .AddFacebook(options =>
+    {
+        var fbAuthNSection =
+            builder.Configuration.GetSection("Authentication:FB");
+        options.ClientId = fbAuthNSection["ClientId"];
+        options.ClientSecret = fbAuthNSection["ClientSecret"];
+    })
+    .AddMicrosoftAccount(microsoftOptions =>
+    {
+        microsoftOptions.ClientId = builder.Configuration["Authentication:Microsoft:ClientId"];
+        microsoftOptions.ClientSecret = builder.Configuration["Authentication:Microsoft:ClientSecret"];
+    })
+    .AddTwitter(twitterOptions =>
+    {
+        twitterOptions.ConsumerKey = builder.Configuration["Authentication:Twitter:ConsumerAPIKey"];
+        twitterOptions.ConsumerSecret = builder.Configuration["Authentication:Twitter:ConsumerSecret"];
+        twitterOptions.RetrieveUserDetails = true;
+    });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
