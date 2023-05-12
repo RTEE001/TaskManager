@@ -11,27 +11,33 @@
 </p>
 <table class="table">
     <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.JobTitle)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.JobDescription)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.JobDueDate)
-            </th>
-            <th></th>
-        </tr>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.JobTitle)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.JobDueDate)
+        </th>
+        <th></th>
+    </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+    @foreach (var item in Model) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.JobTitle)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.JobDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskType)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.JobDueDate)
@@ -42,6 +48,6 @@
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
         </tr>
-}
+    }
     </tbody>
 </table>
