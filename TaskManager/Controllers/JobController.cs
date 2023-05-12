@@ -1,9 +1,4 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Data;
 using TaskManager.Models;
@@ -22,7 +17,7 @@ namespace TaskManager.Controllers
         // GET: Job
         public async Task<IActionResult> Index()
         {
-              return _context.Job != null ? 
+            return _context.Job != null ? 
                           View(await _context.Job.ToListAsync()) :
                           Problem("Entity set 'ApplicationDbContext.Job'  is null.");
         }
@@ -35,10 +30,10 @@ namespace TaskManager.Controllers
         }
         
         // POST: Job/ShowSearchResult
-        public async Task<IActionResult> ShowSearchResult(string SearchPhrase)
+        public async Task<IActionResult> ShowSearchResult(string searchPhrase)
         {
             return _context.Job != null ? 
-                View("Index", await _context.Job.Where(j => j.JobDescription.Contains(SearchPhrase)).ToListAsync()) :
+                View("Index", await _context.Job.Where(j => j.JobDescription.ToLower().Contains(searchPhrase.ToLower())).ToListAsync()) :
                 Problem("Entity set 'ApplicationDbContext.Job'  is null.");
         }
 
@@ -71,7 +66,7 @@ namespace TaskManager.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,JobTitle,JobDescription,JobDueDate")] Job job)
+        public async Task<IActionResult> Create([Bind("Id,JobTitle,JobDescription,TaskType,JobDueDate")] Job job)
         {
             if (ModelState.IsValid)
             {
@@ -103,7 +98,7 @@ namespace TaskManager.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,JobTitle,JobDescription,JobDueDate")] Job job)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,JobTitle,JobDescription,TaskType,JobDueDate")] Job job)
         {
             if (id != job.Id)
             {
