@@ -228,6 +228,9 @@ namespace TaskManager.Data.Migrations
                     b.Property<string>("JobTitle")
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("TaskType")
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("Job");
