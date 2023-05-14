@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Data;
@@ -15,6 +16,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Job
+        [Authorize]
         public async Task<IActionResult> Index()
         {
             return _context.Job != null ? 
@@ -22,6 +24,7 @@ namespace TaskManager.Controllers
                           Problem("Entity set 'ApplicationDbContext.Job'  is null.");
         }
         // GET: Job/ShowSearchForm
+        [Authorize]
         public async Task<IActionResult> ShowSearchForm()
         {
             return _context.Job != null ? 
@@ -30,6 +33,7 @@ namespace TaskManager.Controllers
         }
         
         // POST: Job/ShowSearchResult
+        [Authorize]
         public async Task<IActionResult> ShowSearchResult(string searchPhrase)
         {
             return _context.Job != null ? 
@@ -38,6 +42,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Job/Details/5
+        [Authorize]
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null || _context.Job == null)
@@ -56,6 +61,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Job/Create
+        [Authorize]
         public IActionResult Create()
         {
             return View();
@@ -65,6 +71,7 @@ namespace TaskManager.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,JobTitle,JobDescription,TaskType,JobDueDate")] Job job)
         {
@@ -78,6 +85,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Job/Edit/5
+        [Authorize]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null || _context.Job == null)
@@ -97,6 +105,7 @@ namespace TaskManager.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,JobTitle,JobDescription,TaskType,JobDueDate")] Job job)
         {
@@ -129,6 +138,7 @@ namespace TaskManager.Controllers
         }
 
         // GET: Job/Delete/5
+        [Authorize]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null || _context.Job == null)
@@ -148,6 +158,7 @@ namespace TaskManager.Controllers
 
         // POST: Job/Delete/5
         [HttpPost, ActionName("Delete")]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
