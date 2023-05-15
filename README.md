@@ -1,22 +1,30 @@
 # Task Manager Project in C#:
 
-## Summary:
-
 A web application that allows users to schedule their tasks and sends them reminders via email of tasks for that day.
 
-## Features implemented(done)
-- Registration/Login
-- Create, Read, Update, Delete a task
-- Choose if group or personal task
-- Update search functionality to allow upper and lower case or a mix of both
-- Email verification
 
+## Note:
 
-## Outstanding features(not in order)
+The project is still in the works, and not all features have been implemented yet. For features currently available and those that will be available, [see](TODO.md)
 
-- Integrate with Calendar
-- Allow group integration
-- Allow sub-tasks
-- Check completed and outstanding tasks over a selected period of time
-- Create a better UI
+## Requirements
 
+- Visual studio/ Rider
+- Dotnet SDK
+- SendGrid API key 
+- Google, Mircrosoft, Facebook and Twitter API key and ID for authentication with external providers
+
+## Setting up
+
+- Download the source code on your local machine
+- Open the folder in your chosen IDE
+- Run the following command to add your [SendGrid API key](https://sendgrid.com/)
+```
+dotnet user-secrets set SendGridKey <key>
+```
+- External auth API keys may be added in the [appsettings.json](/TaskManager/appsettings.json) file
+
+## Running the project
+
+- Build the project
+- Click run
